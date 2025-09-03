@@ -1,0 +1,16 @@
+// Contact Form Submission
+document.getElementById("contactForm").addEventListener("submit", function(event) {
+  event.preventDefault();
+  document.getElementById("formMessage").innerText = "? Thank you! Your message has been sent.";
+  this.reset();
+});
+
+// Smooth scroll effect
+document.querySelectorAll("nav ul li a").forEach(link => {
+  link.addEventListener("click", function(e) {
+    e.preventDefault();
+    document.querySelector(this.getAttribute("href")).scrollIntoView({
+      behavior: "smooth"
+    });
+  });
+});
